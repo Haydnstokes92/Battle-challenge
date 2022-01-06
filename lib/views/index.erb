@@ -2,10 +2,12 @@
 <h1> My name is <%= @name %></h1>
 <% end %>
 
+<% unless @name %>
 <form action='http://localhost:4567/named-cat'>
   <input type='text' name='name'>
   <input type='submit' value='Submit'>
 </form>
+<% end %>
 
 <div style='border: 3px dashed red'>
   <img src='http://placekitten.com/500/500'>
